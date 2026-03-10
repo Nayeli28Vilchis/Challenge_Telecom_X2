@@ -1,139 +1,52 @@
 # Challenge_Telecom_X2
 📊 Análisis de Cancelación de Clientes (Churn) – Telecom X
-📌 Descripción del proyecto
+📌 Descripción
 
-En este proyecto se analizan datos de clientes de una empresa de telecomunicaciones con el objetivo de entender qué factores influyen en la cancelación del servicio (churn) y construir modelos que permitan predecir qué clientes tienen mayor probabilidad de cancelar.
+En este proyecto se analiza un dataset de clientes de una empresa de telecomunicaciones para identificar factores relacionados con la cancelación del servicio (churn) y construir modelos de machine learning que permitan predecir qué clientes tienen mayor probabilidad de cancelar.
 
-El proyecto incluye limpieza de datos, análisis exploratorio, preparación de datos, entrenamiento de modelos de machine learning y evaluación de resultados.
-
-🎯 Objetivos
+🎯 Objetivo
 
 Analizar el comportamiento de los clientes.
 
-Identificar variables relacionadas con la cancelación.
+Identificar variables que influyen en la cancelación.
 
 Entrenar modelos predictivos para detectar clientes con riesgo de churn.
 
-Proponer estrategias de retención basadas en los resultados.
-
-📂 Dataset
-
-El dataset contiene información sobre clientes de telecomunicaciones, incluyendo:
-
-Información del cliente
-
-Servicios contratados
-
-Tipo de contrato
-
-Método de pago
-
-Cargos mensuales y totales
-
-Variable objetivo Churn (si el cliente canceló o no)
-
-Archivo utilizado:
-
-TelecomX_Data.json
 🧹 Preparación de datos
 
-Durante el proceso se realizaron las siguientes etapas:
+Se realizaron las siguientes etapas:
 
-Carga y exploración del dataset
+Limpieza y exploración del dataset
 
-Limpieza de datos
+Eliminación de variables irrelevantes (ej. customerID)
 
-Eliminación de variables irrelevantes (como customerID)
+Transformación de variables categóricas con One-Hot Encoding
 
-Transformación de variables categóricas mediante One-Hot Encoding
+Balanceo de clases usando SMOTE
 
-Análisis del desbalance de clases
-
-Balanceo de datos utilizando SMOTE
-
-Normalización de variables para modelos sensibles a escala
-
-📊 Análisis exploratorio
-
-Se analizaron diferentes variables para identificar patrones relacionados con la cancelación:
-
-Tipo de contrato
-
-Tiempo de permanencia del cliente
-
-Cargos mensuales
-
-Gasto total del cliente
-
-Se utilizaron visualizaciones como:
-
-gráficos de barras
-
-boxplots
-
-matriz de correlación
+Normalización de datos para modelos sensibles a escala
 
 🤖 Modelos utilizados
 
-Se entrenaron dos modelos de machine learning:
+Se entrenaron dos modelos de clasificación:
 
-Regresión Logística
+Regresión Logística (requiere normalización)
 
-Modelo sensible a la escala de los datos, por lo que se aplicó normalización con StandardScaler.
+Random Forest (no requiere normalización)
 
-Random Forest
+Los modelos se evaluaron utilizando accuracy, precision, recall, F1-score y matriz de confusión.
 
-Modelo basado en árboles de decisión que no requiere normalización y puede capturar relaciones más complejas entre las variables.
+🔍 Resultados
 
-📈 Evaluación de modelos
+El modelo Random Forest mostró mejor desempeño en la predicción de cancelación.
 
-Los modelos fueron evaluados utilizando:
-
-Accuracy
-
-Precision
-
-Recall
-
-F1-score
-
-Matriz de confusión
-
-El modelo Random Forest mostró mejor desempeño general en la predicción de cancelación.
-
-🔍 Factores importantes en la cancelación
-
-El análisis mostró que algunos factores tienen mayor influencia en la cancelación de clientes:
-
-Tipo de contrato (mes a mes)
-
-Tiempo de permanencia del cliente
-
-Cargos mensuales
-
-Servicios contratados
-
-Los clientes con contratos mensuales y menor tiempo en la empresa tienen mayor probabilidad de cancelar el servicio.
-
-💡 Recomendaciones
-
-Con base en los resultados, algunas estrategias para reducir la cancelación podrían ser:
-
-Incentivar contratos de mayor duración.
-
-Prestar mayor atención a clientes nuevos.
-
-Revisar la estructura de precios de los planes.
-
-Utilizar modelos predictivos para identificar clientes con alto riesgo de cancelación.
+Se identificó que variables como tipo de contrato, tiempo de permanencia del cliente y cargos mensuales tienen mayor influencia en la cancelación.
 
 🛠️ Tecnologías utilizadas
 
 Python
 
 Pandas
-
-NumPy
 
 Matplotlib
 
@@ -150,8 +63,7 @@ Challenge_Telecom_X2
 │
 ├── TelecomX_Data.json
 ├── TelecomX_Analysis.ipynb
-├── README.md
-└── requirements.txt
+└── README.md
 🚀 Conclusión
 
-Este proyecto muestra cómo el análisis de datos y el machine learning pueden ayudar a entender el comportamiento de los clientes y apoyar la toma de decisiones en una empresa. Identificar clientes con riesgo de cancelación permite implementar estrategias de retención y mejorar la relación con los clientes.
+El análisis permite identificar patrones relacionados con la cancelación de clientes y demuestra cómo el uso de análisis de datos y machine learning puede ayudar a las empresas a mejorar sus estrategias de retención.
