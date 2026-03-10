@@ -1,6 +1,8 @@
 # Challenge_Telecom_X2
-📊 Análisis de Cancelación de Clientes (Churn) – Telecom X
-📌 Descripción
+
+**📊 Análisis de Cancelación de Clientes Telecom X2**
+
+**📌 Descripción**
 
 En este proyecto se analiza un dataset de clientes de una empresa de telecomunicaciones para identificar factores relacionados con la cancelación del servicio (churn) y construir modelos de machine learning que permitan predecir qué clientes tienen mayor probabilidad de cancelar.
 
